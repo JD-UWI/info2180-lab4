@@ -6,7 +6,7 @@ window.addEventListener('load',() =>{
         let result = document.querySelector("div#result");
 
         fetch(`superheroes.php?query= ${document.querySelector("input#searchbar").value.replace(/[-&\/\\#,+()$@|~%!.'":;*?<>{}]/g,'')}`.replace(/"[^-0-9+&@#/%?=~_|!:,.;\(\)]"/g, ''), { method: 'GET' })
-            .then(resp => resp.text())
+            .then(response => response.text())
             .then(data => {
                 let e1 = document.createElement("h2");
                 e1.appendChild(document.createTextNode("RESULT"));
@@ -18,3 +18,17 @@ window.addEventListener('load',() =>{
     });
 
 });
+/*
+if(''){
+    result.innerHTML = '';
+    result.innerHTML = data;
+    result.prepend(e1, e2) 
+}
+if(file_exists(resp)){
+ 
+}
+else
+{
+    "SUPERHERO NOT FOUND";
+}
+*/
