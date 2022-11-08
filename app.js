@@ -18,6 +18,7 @@ window.addEventListener('load',() =>{
     });
 
 });
+
 /*
 if(''){
     result.innerHTML = '';
